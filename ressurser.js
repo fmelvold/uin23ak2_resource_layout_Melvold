@@ -101,7 +101,7 @@ document.getElementById("javascript").innerHTML = resources[2].category;
 document.getElementById("react").innerHTML = resources[3].category;
 document.getElementById("sanity").innerHTML = resources[4].category;
 //Henter de ulike resources fra const, legger til hvilket nr dem er satt opp i nav og legger til category som skal bli den synlige teksten
-//Inspo fra: https://www.educba.com/javascript-innerhtml/
+//Kilde: https://www.educba.com/javascript-innerhtml/
 
 function printNav(index) {
     document.getElementById("overskrift").innerHTML = resources[index].category;
@@ -118,7 +118,7 @@ function printNav(index) {
         item.appendChild(link); //Legger link elementet inni item
         list.appendChild(item); //Legger item elementet inni list
     }); //Dette vil få fram title og url fra sources
-    //Inspo fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+    //Kilde: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     //https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
     //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
     //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
@@ -131,4 +131,4 @@ function printNav(index) {
     const activeNavLink = navLinks[index];
     activeNavLink.classList.add("active"); 
 }  //Velger alle elementene i nav og legger dem til i navLinks og bruker forEach til å gå igjennom elementene og fjerner active fra classList. Med dette lager jeg en activeNavLink som legger til active når den er spesifisert.
-   //Inspo fra: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+   //Kilde: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
