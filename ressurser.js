@@ -102,6 +102,7 @@ document.getElementById("react").innerHTML = resources[3].category;
 document.getElementById("sanity").innerHTML = resources[4].category;
 //Henter de ulike resources fra const, legger til hvilket nr dem er satt opp i nav og legger til category som skal bli den synlige teksten
 //Kilde: https://www.educba.com/javascript-innerhtml/
+//
 
 function printNav(index) {
     document.getElementById("overskrift").innerHTML = resources[index].category;
@@ -118,7 +119,7 @@ function printNav(index) {
         item.appendChild(link); //Legger link elementet inni item
         list.appendChild(item); //Legger item elementet inni list
     }); //Dette vil få fram title og url fra sources
-    //Kilde: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+    //Kilde:https://codepen.io/helb/pen/GWppqx
     //https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
     //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
     //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
