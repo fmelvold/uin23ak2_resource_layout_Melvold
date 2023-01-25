@@ -102,12 +102,11 @@ document.getElementById("react").innerHTML = resources[3].category;
 document.getElementById("sanity").innerHTML = resources[4].category;
 //Henter de ulike resources fra const, legger til hvilket nr dem er satt opp i nav og legger til category som skal bli den synlige teksten
 //Kilde: https://www.educba.com/javascript-innerhtml/
-//
 
 function printNav(index) {
     document.getElementById("overskrift").innerHTML = resources[index].category;
     document.getElementById("tekst").innerHTML = resources[index].text;
-//Kjører en funksjon og tar inn index som parameter. Brukes til å ta imot oppdateringer fra ressources. Oppdateringene inneholder category og text fra const. Så blir den printet ut via idene i html
+    //Kjører en funksjon og tar inn index som parameter. Brukes til å ta imot oppdateringer fra ressources. Oppdateringene inneholder category og text fra const. Så blir den printet ut via idene i html
     var list = document.getElementById("kategoriliste"); //Printer ut ul punktene fra html som er fra const 
     list.innerHTML = ""; //For å unngå at tekstene bygger på hverandre etter hver gang man bytter tab
 
