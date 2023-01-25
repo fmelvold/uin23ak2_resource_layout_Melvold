@@ -94,3 +94,41 @@ const resources = [
         ]
     },
 ]
+
+document.getElementById("html").innerHTML = resources[0].category;
+document.getElementById("css").innerHTML = resources[1].category;
+document.getElementById("javascript").innerHTML = resources[2].category;
+document.getElementById("react").innerHTML = resources[3].category;
+document.getElementById("sanity").innerHTML = resources[4].category;
+//Henter de ulike resources fra const, legger til hvilket nr dem er satt opp i nav og legger til category som skal bli den synlige teksten
+//Inspo fra: https://www.educba.com/javascript-innerhtml/
+
+function printNav(index) {
+    document.getElementById("overskrift").innerHTML = resources[index].category;
+    document.getElementById("tekst").innerHTML = resources[index].text;
+//Kjører en funksjon og tar inn index som parameter. Brukes til å ta imot oppdateringer fra ressources. Oppdateringene inneholder category og text fra const. Så blir den printet ut via idene i html
+    var list = document.getElementById("kategoriliste"); //Printer ut ul punktene fra html som er fra const 
+    list.innerHTML = ""; //For å unngå at tekstene bygger på hverandre etter hver gang man bytter tab
+
+    resources[index].sources.forEach(function(source) {
+        const item = document.createElement("li");
+        const link = document.createElement("a");  //Går igjennom alle elementene i sources og oppretter li og a elementer ved hjelp av createElement 
+        link.innerHTML = source.title; //Setter innerHTML av a elementene fra title
+        link.href = source.url; //Setter href av li elementene fra url
+        item.appendChild(link); //Legger link elementet inni item
+        list.appendChild(item); //Legger item elementet inni list
+    }); //Dette vil få fram title og url fra sources
+    //Inspo fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+    //https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
+    //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+    //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+    
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+    });
+    
+    const activeNavLink = navLinks[index];
+    activeNavLink.classList.add("active"); 
+}  //Velger alle elementene i nav og legger dem til i navLinks og bruker forEach til å gå igjennom elementene og fjerner active fra classList. Med dette lager jeg en activeNavLink som legger til active når den er spesifisert.
+   //Inspo fra: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
