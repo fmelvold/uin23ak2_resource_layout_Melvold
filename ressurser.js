@@ -121,7 +121,6 @@ function printNav(index) {
     }); //Dette vil få fram title og url fra sources
     //Kilde:https://codepen.io/helb/pen/GWppqx
     //https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
-    //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
     //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
     
     const navLinks = document.querySelectorAll("nav a");
